@@ -122,7 +122,7 @@ export default function Home() {
                                         <div class="nameBanner" >
                                             <h1 ref={typedElement} className="typed-text"></h1>
                                         </div>
-                                        <h2>I'm a roboticist with a passion for perception, control systems, navigation, and AI.</h2>
+                                        <h2>Obsessed with democratizing robotics, breaking down barriers, and inspiring the next generation of engineers — while relentlessly pursuing innovations in robotic systems. They go hand in hand 🤝</h2>
                                     </div>
                                     <div className="terminal">
                                         <div className="terminal-header">
@@ -151,46 +151,50 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="section">
-
                                 <div className="projects-container">
-                                    <h1>
-                                        Projects
-                                    </h1>
-                                    <div className="project-card">
-                                        <h3>Immersive Visual Fusion</h3>
-                                        <p>A ROS 2 package for overlaying depth information over a 360 camera view.</p>
-                                        <a href="https://github.com/yourusername/project1" target="_blank" className="github-button">
-                                            <i className="fab fa-github"></i>
-                                        </a>
-                                        <a href="https://devpost.com/software/project3" target="_blank" className="devpost-button">
-                                            <i className="fab fa-dev"></i>
-                                        </a>
-                                    </div>
-                                    <div className="project-card">
-                                        <h2></h2>
-                                        <p>Description of Project 2</p>
-                                    </div>
-                                    <div className="project-card">
-                                        <h2>Project 3</h2>
-                                        <p>Description of Project 3</p>
+                                    <div className="projects">
+                                        <h1>
+                                            Projects
+                                        </h1>
+                                        <h2> A collection of some of my passion projects</h2>
+                                        <div className="project-card">
+                                            <h3>Immersive Visual Fusion</h3>
+                                            <p>A ROS 2 package for overlaying depth information over a 360 camera view.</p>
+                                            <a href="https://github.com/yourusername/project1" target="_blank" className="github-button">
+                                                <i className="fab fa-github"></i>
+                                            </a>
+                                            <a href="https://devpost.com/software/project3" target="_blank" className="devpost-button">
+                                                <i className="fab fa-dev"></i>
+                                            </a>
+                                        </div>
+                                        <div className="project-card">
+                                            <h2></h2>
+                                            <p>Description of Project 2</p>
+                                        </div>
+                                        <div className="project-card">
+                                            <h2>Project 3</h2>
+                                            <p>Description of Project 3</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="section">
                                 <div className="contact-container">
-                                    <h2>Contact Me</h2>
-                                    <div className="contact-card">
-                                        <p>Always interested in chatting robots, programming, or more!</p>
-                                        <div className="contact-links">
-                                            <a href="https://github.com/yourusername" target="_blank" className="contact-button">
-                                                <i className="fab fa-github"></i> GitHub
-                                            </a>
-                                            <a href="https://www.linkedin.com/in/yourusername" target="_blank" className="contact-button">
-                                                <i className="fab fa-linkedin"></i> LinkedIn
-                                            </a>
-                                            <a href="mailto:your.email@example.com" className="contact-button">
-                                                <i className="fas fa-envelope"></i> Email
-                                            </a>
+                                    <div className="contact">
+                                        <h1>Contact Me</h1>
+                                        <div className="contact-card">
+                                            <p>Always interested in chatting robots, programming, and more!</p>
+                                            <div className="contact-links">
+                                                <a href="https://github.com/yourusername" target="_blank" className="contact-button">
+                                                    <i className="fab fa-github"></i> GitHub
+                                                </a>
+                                                <a href="https://www.linkedin.com/in/yourusername" target="_blank" className="contact-button">
+                                                    <i className="fab fa-linkedin"></i> LinkedIn
+                                                </a>
+                                                <a href="mailto:your.email@example.com" className="contact-button">
+                                                    <i className="fas fa-envelope"></i> Email
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

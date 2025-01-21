@@ -40,6 +40,10 @@ h3 {
   align-items: center;
 }
 
+.about h2 {
+  width: 70vw;
+}
+
 .nameBanner {
   display: flex;
   flex-direction: row;
@@ -73,10 +77,12 @@ h3 {
 
 /* Fullpage.js styles */
 .section {
+  display: flex;
   height: 100vh;
   width: 100%;
   padding: 20px;
-  border: 5px solid red;
+  /* Debugging width */
+  /* border: 5px solid red; */
   align-items: center;
   justify-content: center;
 }
@@ -89,8 +95,20 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
+  /* Debugging width */
+  /* border: 1px solid red; */
   width: 90%;
+
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects h2 {
+  width: 70vw;
 }
 
 .project-card,
@@ -104,6 +122,7 @@ h3 {
   width: 90%;
   text-align: Left;
   transition: transform 0.2s;
+  overflow: hidden;
 }
 
 .project-card:hover {
@@ -140,6 +159,36 @@ h3 {
 .devpost-button:hover {
   background-color: #555;
 }
+
+@media (min-width: 1250px) {
+  .contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contact h1 {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 1250px) {
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact h1 {
+    align-items: center;
+  }
+}
+
+.contact-card {
+  justify-items: center;
+}
+
 
 .container-card p {
   margin-bottom: 0;
@@ -186,7 +235,7 @@ hr.static-line {
   width: 50%;
   border: none;
   height: 2px;
-  background-color: #fff;
+  background-color: #3D52A0;
 }
 
 /* Scrolling text animation */
@@ -340,6 +389,10 @@ hr.static-line {
   display: flex;
   justify-content: space-between;
   padding: 8px;
+}
+
+.terminal .terminal-header .terminal-title {
+  color: #3D52A0;
 }
 
 .terminal-window {
