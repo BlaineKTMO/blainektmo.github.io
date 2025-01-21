@@ -1,7 +1,5 @@
 # Portfolio website
 
-# Portfolio Website
-
 ## Description
 This is a personal portfolio website designed to showcase my projects, skills, and contact information. The website is built with modern web technologies and follows best practices for responsive design and accessibility.
 
