@@ -83,14 +83,16 @@ export default function Home() {
         let response;
         switch (command.toLowerCase()) {
             case 'help':
-                response = "Available commands: help, about, projects";
+                response = "Available commands: help, about, Blaine";
                 break;
             case 'about':
-                response = "This is a portfolio site created by [Your Name].";
+                response = "This is a portfolio site created by Blaine.";
                 break;
             case 'projects':
                 response = "Projects: Project1, Project2, Project3";
                 break;
+            case 'blaine':
+                response = "Available flags: --currentRole, --location, --hobbies, --favColor, --funFact, --research"
             default:
                 response = `Command not found: ${command}`;
         }
@@ -122,7 +124,7 @@ export default function Home() {
                                         <div class="nameBanner" >
                                             <h1 ref={typedElement} className="typed-text"></h1>
                                         </div>
-                                        <h2>Obsessed with democratizing robotics, breaking down barriers, and inspiring the next generation of engineers — while relentlessly pursuing innovations in robotic systems. They go hand in hand 🤝</h2>
+                                        <h2>Obsessed with democratizing robotics and inspiring the next generation of engineers — while relentlessly pursuing innovations in robotic systems. They go hand in hand 🤝</h2>
                                     </div>
                                     <div className="terminal">
                                         <div className="terminal-header">
