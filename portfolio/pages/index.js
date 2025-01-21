@@ -33,17 +33,15 @@ export default function Home() {
 
         const options = {
             strings: [
-                "Hi, I'm <strong><em>Blaine</em></strong>",
-                "I'm a software engineer...",
-                "...specializing in robotics and automata."
+                "> Hi, I'm <strong>Blaine<strong>",
             ],
             typeSpeed: typeSpeeds[0],
             backSpeed: backSpeeds[0],
             backDelay: backDelays[0],
             loop: false,
             showCursor: true, // Show the cursor
-            cursorChar: '<', // Customize the cursor character
-            autoInsertCss: true, // Automatically insert CSS for cursor
+            cursorChar: '█', // Customize the cursor character
+            autoInsertCss: false, // Automatically insert CSS for cursor
             preStringTyped: (arrayPos, self) => {
                 // Update typeSpeed and backDelay for each string
                 self.typeSpeed = typeSpeeds[arrayPos];
@@ -61,9 +59,16 @@ export default function Home() {
     }, []);
 
     const [terminalLines, setTerminalLines] = useState([
-        "Welcome to my portfolio site!",
-        "You can explore my projects and skills here.",
-        "Type 'help' to see available commands.",
+        "> Blaine --currentRole",
+        "Software Research Engineer at Ford, fundamentally changing how cars are built.",
+        "‎ ",
+        "> Blaine --location",
+        "Detroit Metropolitan Area, Michigan",
+        "‎ ",
+        "> Blaine --hobbies",
+        "Leather working, watch collecting, programming, motorcycle riding, and learning.",
+        "‎ ",
+        "> Type 'help' to see available commands.",
     ]);
 
     const handleKeyDown = (event) => {
@@ -103,6 +108,7 @@ export default function Home() {
                 <title>About Me</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="google-site-verification" content="04j-0yUDW2oBFuoMn83sJ_dPGHnmBymiGppHJheaw0o" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
             </Head>
             <ReactFullpage
                 navigation
@@ -111,57 +117,81 @@ export default function Home() {
                     return (
                         <ReactFullpage.Wrapper>
                             <div className="section">
-                                <section id="about">
-                                    <div className='overlay-top'>
-                                        <h1 ref={typedElement} className="typed-text"></h1>
-                                    </div>
-                                </section>
-                                <div className="terminal" onClick={focusInput}>
-                                    <div className="terminal-header">
-                                        <div className="terminal-buttons">
-                                            <span className="terminal-button red"></span>
-                                            <span className="terminal-button yellow"></span>
-                                            <span className="terminal-button green"></span>
+                                <div className="about-container">
+                                    <div className="about">
+                                        <div class="nameBanner" >
+                                            <h1 ref={typedElement} className="typed-text"></h1>
                                         </div>
-                                        <div className="terminal-title">Terminal</div>
+                                        <h2>I'm a roboticist with a passion for perception, control systems, navigation, and AI.</h2>
                                     </div>
-                                    <div className="terminal-body">
-                                        {terminalLines.map((line, index) => (
-                                            <p key={index} className="terminal-line">{line}</p>
-                                        ))}
-                                        <input
-                                            type="text"
-                                            id="terminal-input"
-                                            className="terminal-input"
-                                            onKeyDown={handleKeyDown}
-                                            autoFocus
-                                        />
+                                    <div className="terminal">
+                                        <div className="terminal-header">
+                                            <div className="terminal-buttons">
+                                                <span className="terminal-button red"></span>
+                                                <span className="terminal-button yellow"></span>
+                                                <span className="terminal-button green"></span>
+                                            </div>
+                                            <div className="terminal-title">Terminal</div>
+                                        </div>
+                                        <div className='terminal-window' onClick={focusInput}>
+                                            <div className="terminal-body">
+                                                {terminalLines.map((line, index) => (
+                                                    <p key={index} className="terminal-line">{line}</p>
+                                                ))}
+                                                <input
+                                                    type="text"
+                                                    id="terminal-input"
+                                                    className="terminal-input"
+                                                    onKeyDown={handleKeyDown}
+                                                    autoFocus
+                                                />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="section">
-                                <h2>Slide 2</h2>
-                                <p>Content for the second slide.</p>
-                            </div>
-                            <div className="section">
-                                <div className='overlay-l'>
-                                    <div className='text-container'>
-                                        <h2>Stay a while</h2>
-                                        <p>Content for the third slide.</p>
+
+                                <div className="projects-container">
+                                    <h1>
+                                        Projects
+                                    </h1>
+                                    <div className="project-card">
+                                        <h3>Immersive Visual Fusion</h3>
+                                        <p>A ROS 2 package for overlaying depth information over a 360 camera view.</p>
+                                        <a href="https://github.com/yourusername/project1" target="_blank" className="github-button">
+                                            <i className="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://devpost.com/software/project3" target="_blank" className="devpost-button">
+                                            <i className="fab fa-dev"></i>
+                                        </a>
+                                    </div>
+                                    <div className="project-card">
+                                        <h2></h2>
+                                        <p>Description of Project 2</p>
+                                    </div>
+                                    <div className="project-card">
+                                        <h2>Project 3</h2>
+                                        <p>Description of Project 3</p>
                                     </div>
                                 </div>
-                                <div className='overlay'>
-                                    <div className="mouse-position" style={{ transform: `translate(${mousePosition.x}%, ${mousePosition.y}%)` }}>
-                                        Robotics embodies a fascinating convergence of art, engineering, and technology, creating a realm where imagination meets precision. The beauty of robotics lies not only in the intricate designs and sophisticated mechanics of the machines themselves but also in their capacity to enhance human life and expand our understanding of the world. Each robot, whether a delicate humanoid capable of expressing emotion or a robust industrial arm executing complex tasks, showcases the elegance of human ingenuity and creativity. The interplay of sensors, algorithms, and actuators enables robots to perform with remarkable efficiency and adaptability, often mimicking the nuanced movements of living beings. As they navigate environments, solve problems, and even engage in creative pursuits like painting or music composition, robots challenge our perceptions of intelligence and artistry. Moreover, the collaborative potential of robotics—where machines and humans work side by side—illustrates a future rich with possibilities, highlighting the harmony between technology and humanity. In this intricate dance of metal and code, we find not just tools, but companions that inspire awe and spark curiosity, inviting us to explore new horizons of innovation and discovery. Robotics embodies a fascinating convergence of art, engineering, and technology, creating a realm where imagination meets precision. The beauty of robotics lies not only in the intricate designs and sophisticated mechanics of the machines themselves but also in their capacity to enhance human life and expand our understanding of the world. Each robot, whether a delicate humanoid capable of expressing emotion or a robust industrial arm executing complex tasks, showcases the elegance of human ingenuity and creativity. The interplay of sensors, algorithms, and actuators enables robots to perform with remarkable efficiency and adaptability, often mimicking the nuanced movements of living beings. As they navigate environments, solve problems, and even engage in creative pursuits like painting or music composition, robots challenge our perceptions of intelligence and artistry. Moreover, the collaborative potential of robotics—where machines and humans work side by side—illustrates a future rich with possibilities, highlighting the harmony between technology and humanity. In this intricate dance of metal and code, we find not just tools, but companions that inspire awe and spark curiosity, inviting us to explore new horizons of innovation and discovery.
-                                    </div>
-                                    <div className="scrolling-text-top">
-                                        <span>Motorcycles Aprillia</span>
-                                    </div>
-                                    <div className="scrolling-text-mid">
-                                        <span>Robotics Controls Autonomous Mobility</span>
-                                    </div>
-                                    <div className="scrolling-text-bot">
-                                        <span>Programming Competitions</span>
+                            </div>
+                            <div className="section">
+                                <div className="contact-container">
+                                    <h2>Contact Me</h2>
+                                    <div className="contact-card">
+                                        <p>Always interested in chatting robots, programming, or more!</p>
+                                        <div className="contact-links">
+                                            <a href="https://github.com/yourusername" target="_blank" className="contact-button">
+                                                <i className="fab fa-github"></i> GitHub
+                                            </a>
+                                            <a href="https://www.linkedin.com/in/yourusername" target="_blank" className="contact-button">
+                                                <i className="fab fa-linkedin"></i> LinkedIn
+                                            </a>
+                                            <a href="mailto:your.email@example.com" className="contact-button">
+                                                <i className="fas fa-envelope"></i> Email
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
