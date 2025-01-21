@@ -158,22 +158,32 @@ export default function Home() {
                                         </h1>
                                         <h2> A collection of some of my passion projects</h2>
                                         <div className="project-card">
-                                            <h3>Immersive Visual Fusion</h3>
-                                            <p>A ROS 2 package for overlaying depth information over a 360 camera view.</p>
-                                            <a href="https://github.com/yourusername/project1" target="_blank" className="github-button">
+                                            <h3>WayneHacks 3: Immersive Visual Fusion</h3>
+                                            <p>This project integrates data from a 360-degree camera and Velodyne LiDAR sensor to create a fused image, combining visual and depth information for a comprehensive environmental view. Using ROS 2, it includes lane segmentation for autonomous navigation and real-time VR visualization through Unity. Key features include hardware acceleration, efficient point cloud processing, and a VR “robot perspective” for immersive interaction.</p>
+                                            <a href="https://github.com/BlaineKTMO/WayneHacks3" target="_blank" className="github-button">
                                                 <i className="fab fa-github"></i>
                                             </a>
-                                            <a href="https://devpost.com/software/project3" target="_blank" className="devpost-button">
+                                            <a href="https://devpost.com/software/immersive-visual-fusion" target="_blank" className="devpost-button">
                                                 <i className="fab fa-dev"></i>
+                                            </a>
+                                            <a href="https://www.youtube.com/watch?v=8Lp-LuREHg8&t" target="_blank" className="devpost-button">
+                                                <i className="fab fa-youtube"></i>
+                                            </a>
+
+                                        </div>
+                                        <div className="project-card">
+                                            <h3>Tic Tac Toe Robot</h3>
+                                            <p>Designed and built a three-link robotic arm with MATLAB-based DH modeling, GUI controls, and optimization for precision. Implemented AI-driven decision-making for inverse kinematics and remote control via ROS. Developed and benchmarked path planning algorithms (Distance Transform, D*, PRM) for efficient navigation. Additionally, created a 3-joint planar robot for playing tic-tac-toe, integrating AI API connections in MATLAB and deploying the game through a Python Flask server in ROS2, containerized with Docker for cloud hosting.</p>
+                                            <a href="https://github.com/BlaineKTMO/web-tic-tac-toe" target="_blank" className="github-button">
+                                                <i className="fab fa-github"></i>
                                             </a>
                                         </div>
                                         <div className="project-card">
-                                            <h2></h2>
-                                            <p>Description of Project 2</p>
-                                        </div>
-                                        <div className="project-card">
-                                            <h2>Project 3</h2>
-                                            <p>Description of Project 3</p>
+                                            <h3>HackDearborn 3: SwarmSense</h3>
+                                            <p>SwarmSense uses multi-modal sensor fusion (LiDAR, cameras, audio) and reinforcement learning to enable vehicles to communicate and navigate with enhanced awareness. The system optimizes traffic flow, assists with parking, and supports scalable, autonomous vehicle coordination. Built with ROS2 and AI, SwarmSense aims to improve road safety and efficiency through collective intelligence.</p>
+                                            <a href="https://devpost.com/software/swarmsense-connected-intelligence-for-connected-vehicles" target="_blank" className="devpost-button">
+                                                <i className="fab fa-dev"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
