@@ -1,0 +1,89 @@
+/* Terminal styles */
+.terminal {
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: rgb(228, 228, 228);
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.terminal .header .title {
+  color: #3D52A0;
+}
+
+.terminalWindow {
+  background-color: #3D52A0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /* box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5); */
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  height: 500px;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+.terminalBody {
+  /* overflow-y: scroll; */
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.button {
+  border-radius: 50%;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+}
+
+.button.red {
+  background-color: #ff5f56;
+}
+
+.button.yellow {
+  background-color: #ffbd2e;
+}
+
+.button.green {
+  background-color: #27c93f;
+}
+
+.title {
+  color: #fff;
+  font-size: 14px;
+}
+
+.terminalBody {
+  padding: 20px;
+  text-align: left;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.terminalLine {
+  margin: 0;
+}
+
+.terminalInput {
+  background-color: #3D52A0;
+  border: none;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+}
