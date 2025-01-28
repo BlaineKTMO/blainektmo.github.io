@@ -186,7 +186,7 @@ h3 {
   background-color: #555;
 }
 
-/* @media (min-width: 1250px) {
+@media (min-width: 920px) {
   .contact {
     display: flex;
     flex-direction: row;
@@ -196,36 +196,38 @@ h3 {
   .contact h1 {
     width: 30vw;
   }
-} */
 
-/* @media (max-width: 1250px) { */
+  .contact-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 20px;
+    margin-top: 1px;
+  }
 
-  .contact {
+
+}
+
+@media (max-width: 920px) {
+
+  .contact-card {
     display: flex;
     flex-direction: column;
+    justify-items: center;
     align-items: center;
   }
-
-  .contact h1 {
-    align-items: center;
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
   }
-/* } */
 
-.contact-card {
-  justify-items: center;
 }
 
 
 .container-card p {
   margin-bottom: 0;
-}
-
-.contact-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  gap: 20px;
-  margin-top: 20px;
 }
 
 .contact-button {
