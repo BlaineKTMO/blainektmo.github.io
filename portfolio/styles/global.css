@@ -1,10 +1,14 @@
 /* styles/global.css */
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body {
-  font-family: Monaco, Consolas, Lucida Console;
+  font-family: 'Consolas', 'Monaco', 'Lucida Console'; 
   margin: 0;
   padding: 0;
   background-color: #000;
@@ -12,6 +16,7 @@ body {
 }
 
 h1 {
+  font-family: 'Fire Code', monospace;
   font-size: 3em;
   font-weight: normal;
   text-align: left;
@@ -19,6 +24,7 @@ h1 {
 }
 
 h2 {
+  font-family: 'Fire Code', monospace;
   font-size: 2em;
   font-weight: normal;
   text-align: left;
@@ -41,6 +47,10 @@ h3 {
   justify-content: left;
   align-content: left;
   text-align: left;
+}
+
+.about h1 {
+  font-family: 'Fire Code', monospace;
 }
 
 .about p {
@@ -90,7 +100,7 @@ h3 {
   /* border: 5px solid red; */
   align-items: center;
   justify-content: center;
-  background-color: #EDE8F5;
+  background-color: #ebe8f5;
 }
 
 .about-container {
@@ -104,8 +114,9 @@ h3 {
   margin: 10%;
 }
 
-.about-container .terminal {
-  width: 40%;
+.about .terminal {
+  width: 40vw;
+  overflow-x: hidden;
 }
 
 /* .projects-container,
@@ -120,21 +131,22 @@ h3 {
 
 } */
 
+.education-container,
 .projects-container,
 .contact-container {
   display: flex;
-  align-items: top;
   justify-content: left;
+  align-items: center;
+}
+
+.education-container h2 {
+  text-align: left;
 }
 
 .projects {
   display: flex;
   flex-direction: column;
   align-items: left;
-}
-
-.projects h2 {
-  text-align: left;
 }
 
 .project-card,
@@ -151,17 +163,41 @@ h3 {
   overflow: hidden;
 }
 
+.contact-card:hover,
 .project-card:hover {
   transform: scale(1.05);
 }
 
-.project-card h2 {
-  margin-top: 0;
-}
-
 .project-card p {
   margin-bottom: 0;
+  font-family: 'Montserrat';
+
 }
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.skill-box {
+  outline-color: #3D52A0; 
+  outline-width: 2px;
+  outline-style: solid;
+  background-color: #fff;
+  color: #3D52A0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-size: 0.9em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* projectImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 15px;
+} */
 
 .github-button,
 .devpost-button {
@@ -215,6 +251,7 @@ h3 {
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    transform: scale(1.05);
   }
   .contact-links {
     display: flex;

@@ -1,0 +1,15 @@
+.section {
+    margin: 20px 0;
+}
+
+.talksList {
+    list-style-type: none;
+    padding: 0;
+    color: #3D52A0;
+}
+
+.talksList li {
+    font-size: 1.5em;
+    margin: 10px 0;
+    padding-left: 1%;
+}

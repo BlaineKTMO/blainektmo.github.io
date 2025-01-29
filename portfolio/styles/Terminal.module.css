@@ -1,7 +1,7 @@
 /* Terminal styles */
 .terminal {
   height: 500px;
-  width: 100%;
+  width: 60%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -36,6 +36,7 @@
 
 .terminalBody {
   /* overflow-y: scroll; */
+  overflow-x: hidden;
 }
 
 .buttons {

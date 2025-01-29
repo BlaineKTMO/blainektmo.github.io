@@ -29,7 +29,9 @@ const Terminal = () => {
                 response = "Projects: Project1, Project2, Project3";
                 break;
             case 'blaine':
-                response = "Available flags: --currentRole, --location, --hobbies, --favColor, --funFact, --research"
+                // response = "Available flags: --currentRole, --location, --hobbies, --favColor, --funFact, --research"
+                response = "Blaine holds a B.S. in Computer Science from Wayne State and currently work as a Software Controls Research Engineer at Ford, where he blend his love for technology with real-world applications. An avid programmer from a young age, Blaine also likes to participate in programming competitions, host educational workshops, and empower the younger generation to take up coding. Inspired by his mentors, he places a large emphasis on expanding the developer community, particularly in Robotics. Some of his most notable events have been HackDearborn 2024 and the Reverse Science Fair by the Science Policy Network of Detroit. Through these events, he garnered interest in robotics from secondary school students, peers, industry leaders, and politicians. When he's not programming or pursuing his interests, you can usually find him riding his motorcycle downtown or relaxing in a cozy café."
+                break;
             default:
                 response = `Command not found: ${command}`;
         }
@@ -38,10 +40,10 @@ const Terminal = () => {
 
     useEffect(() => {
         const focusInput = () => {
-            document.getElementById('terminal-input').focus();
+            document.getElementById('terminalInput').focus();
         };
 
-        const terminalWindow = document.querySelector('.terminal-window');
+        const terminalWindow = document.querySelector('.terminalWindow');
         if (terminalWindow) {
             terminalWindow.addEventListener('click', focusInput);
         }
@@ -51,6 +53,14 @@ const Terminal = () => {
             }
         };
     }, []);
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            const newLine = event.target.value;
+            processCommand(newLine);
+            event.target.value = '';
+        }
+    };
 
     return (
         <div className={styles.terminal}>
@@ -62,14 +72,14 @@ const Terminal = () => {
                 </div>
                 <div className={styles.title}>Terminal</div>
             </div>
-            <div className={styles.terminalWindow}>
+            <div className={styles.terminalWindow} onClick={handleKeyDown}>
                 <div className={styles.terminalBody}>
                     {terminalLines.map((line, index) => (
                         <p key={index} className={styles.terminalLine}>{line}</p>
                     ))}
                     <input
                         type="text"
-                        id="terminal-input"
+                        id="terminalInput"
                         className={styles.terminalInput}
                         onKeyDown={(e) => {
                             if (e.key === 'Enter') {

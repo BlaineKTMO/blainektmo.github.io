@@ -1,0 +1,31 @@
+.educationContainer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: left;
+    align-items: left;
+}
+
+.educationCard {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.2s;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.educationCard:hover {
+    transform: scale(1.05);
+}
+
+.educationCard h3 {
+    margin-top: 0;
+}
+
+.educationCard p {
+    margin-bottom: 0;
+}

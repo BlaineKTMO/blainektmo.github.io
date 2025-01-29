@@ -1,9 +1,12 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import Typed from 'typed.js';
 // import ReactFullpage from '@fullpage/react-fullpage';
 
 import Terminal from '../components/Terminal';
+import Education from '../components/Education';
+import Seen from '../components/Seen';
 
 export default function Home() {
     const typedElement = useRef(null);
@@ -60,18 +63,9 @@ export default function Home() {
         };
     }, []);
 
-    const handleKeyDown = (event) => {
-        if (event.key === 'Enter') {
-            const newLine = event.target.value;
-            processCommand(newLine);
-            event.target.value = '';
-        }
-    };
-
     // const focusInput = () => {
     //     document.getElementById('terminal-input').focus();
     // };
-
 
     return (
         <div>
@@ -87,15 +81,24 @@ export default function Home() {
                         <div className="nameBanner" >
                             <h1 ref={typedElement} className="typed-text"></h1>
                         </div>
-                        <p>Obsessed with democratizing robotics and inspiring the next generation of engineers — while relentlessly pursuing innovations in robotic systems. They go hand in hand 🤝</p>
+                        <p>Obsessed with democratizing robotics and inspiring the next generation of engineers — while relentlessly pursuing innovations in robotic systems. </p>
+                        <p>They go hand in hand 🤝</p>
                     </div>
-                    {/* <Terminal className="terminal"/> */}
+                    <Terminal className="terminal"/>
+                    <Education/>
                     <h1>
-                        Projects
+                        🛠️ Projects
                     </h1>
                     <h2> A collection of some of my passion projects</h2>
                     <div className="project-card">
                         <h3>WayneHacks 3: Immersive Visual Fusion</h3>
+                        <div className="skills">
+                            <span className="skill-box">ROS 2</span>
+                            <span className="skill-box">Unity</span>
+                            <span className="skill-box">VR</span>
+                            <span className="skill-box">Hardware Acceleration</span>
+                            <span className="skill-box">OpenCV</span>
+                        </div>
                         <p>This project integrates data from a 360-degree camera and Velodyne LiDAR sensor to create a fused image, combining visual and depth information for a comprehensive environmental view. Using ROS 2, it includes lane segmentation for autonomous navigation and real-time VR visualization through Unity. Key features include hardware acceleration, efficient point cloud processing, and a VR “robot perspective” for immersive interaction.</p>
                         <a href="https://github.com/BlaineKTMO/WayneHacks3" target="_blank" className="github-button">
                             <i className="fab fa-github"></i>
@@ -109,6 +112,14 @@ export default function Home() {
                     </div>
                     <div className="project-card">
                         <h3>Tic Tac Toe Robot</h3>
+                        <div className="skills">
+                            <span className="skill-box">ROS 2</span>
+                            <span className="skill-box">MatLab</span>
+                            <span className="skill-box">Kinematics</span>
+                            <span className="skill-box">Flask</span>
+                            <span className="skill-box">Robot Modeling</span>
+                            <span className="skill-box">Trajectory Planning</span>
+                        </div>
                         <p>Designed and built a three-link robotic arm with MATLAB-based DH modeling, GUI controls, and optimization for precision. Implemented AI-driven decision-making for inverse kinematics and remote control via ROS. Developed and benchmarked path planning algorithms (Distance Transform, D*, PRM) for efficient navigation. Additionally, created a 3-joint planar robot for playing tic-tac-toe, integrating AI API connections in MATLAB and deploying the game through a Python Flask server in ROS2, containerized with Docker for cloud hosting.</p>
                         <a href="https://github.com/BlaineKTMO/web-tic-tac-toe" target="_blank" className="github-button">
                             <i className="fab fa-github"></i>
@@ -116,12 +127,26 @@ export default function Home() {
                     </div>
                     <div className="project-card">
                         <h3>HackDearborn 3: SwarmSense</h3>
+                        <div className="skills">
+                            <span className="skill-box">ROS 2</span>
+                            <span className="skill-box">Edge Impulse</span>
+                            <span className="skill-box">Audio AI & Spectogram Generation</span>
+                            <span className="skill-box">OpenCV</span>
+                        </div>
+                        {/* <Image
+                            src="/images/placeholder.webp"
+                            alt="Tic Tac Toe Robot"
+                            className="project-image"
+                            width={50}
+                            height=
+                            /> */}
                         <p>SwarmSense uses multi-modal sensor fusion (LiDAR, cameras, audio) and reinforcement learning to enable vehicles to communicate and navigate with enhanced awareness. The system optimizes traffic flow, assists with parking, and supports scalable, autonomous vehicle coordination. Built with ROS2 and AI, SwarmSense aims to improve road safety and efficiency through collective intelligence.</p>
                         <a href="https://devpost.com/software/swarmsense-connected-intelligence-for-connected-vehicles" target="_blank" className="devpost-button">
                             <i className="fab fa-dev"></i>
                         </a>
                     </div>
-                    <h1>Contact Me</h1>
+                    <Seen />
+                    <h1>📞 Contact Me</h1>
                     <div className="contact-card">
                         <p>Always interested in chatting robots, programming, and more!</p>
                         <div className="contact-links">
