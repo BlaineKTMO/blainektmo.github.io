@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "start": "next start",
+        "start": "npx serve@latest out",
         "export": "next export",
         "deploy": "next build && gh-pages -d out --nojekyll --cname blainektmo.github.io"
     },
